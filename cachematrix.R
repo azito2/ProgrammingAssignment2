@@ -9,7 +9,7 @@ makeCacheMatrix <- function(x = matrix()) {
         x <<- y
         inv <<- NULL
             #the set function allows you to change the matrix you have paired
-            #to a particular variable. For example:
+            #to a particular object. For example:
             #RiRa <- makeCacheMatrix(c(2,4,6,8)2,2) makes a 2x2 matrix 
                 #[,1]=2,4 [,2]=6,8
             #if you enter RiRa$set(c(1,3,5,7,9,11,13,15,17)3,3)
@@ -32,8 +32,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## This function will use the nested functions above to either return or calculate
-## the inverse of the matrix paired to an object with the function above.
+## This function will use the nested functions above to either return or 
+## calculate the inverse of the matrix paired to an object with the 
+## function above.
 
 cacheSolve <- function(x, ...) {
         #The major argument here, x, should be a matrix, but the function can take others
